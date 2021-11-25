@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>check an input is an array or not</title>
+    <script>
+      var is_array = (input) => {
+        if (toString.call(input) === "[object Array]") return true;
+        return false;
+      };
+      console.log(is_array("w3resource"));
+      console.log(is_array([1, 2, 4, 5]));
+      console.log(is_array(["ram", "tanu", "nimisha", "akki"]));
+    </script>
+  </head>
+</html>

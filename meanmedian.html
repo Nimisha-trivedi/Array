@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Calculate the mean and median values of the number elements from the input
+      array.
+    </title>
+    <script>
+      const input = [12, 46, 32, 64];
+      input.sort((a, b) => a - b);
+
+      const output = input.reduce(
+        (accumulator, currentValue, index, array) => {
+          accumulator.mean += currentValue / array.length;
+
+          if (Math.abs(index + 1 - array.length / 2) < 1) {
+            accumulator.median = currentValue;
+          }
+
+          return accumulator;
+        },
+        { mean: 0, median: 0 }
+      );
+      console.log(output);
+    </script>
+  </head>
+</html>
